@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script src="https://cdn.netpie.io/microgear.js"></script>
+
+<script>
+	const APPID = "ChiApp"; 
+	const KEY = "4WVyLcd5WzF44kn";
+	const SECRET = "qKZtR327b1xKFg82RhI7ePo0M";
+	
+	const ALIAS = "mychihtml";
+	
+	var microgear = Microgear.create({
+		key: KEY,
+		secret: SECRET,
+		alias: ALIAS
+	});
+	
+	microgear.on('message', function(topic, msg) {
+		document.getElementById("data").innerHTML = msg + "eiei";
+	});
+	
+	microgear.on('connected', function() {
+		microgear.setAlias(ALIAS);
+		document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+		setInterval(function() {
+			microgear.chat(ALIAS, "Hello from myself at " + Date.now());
+		}, 1000);
+	});
+	
+	microgear.connect(APPID);
+</script>
+
+<div id="data">___</div>
