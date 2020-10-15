@@ -1,0 +1,25 @@
+#define AS3 B0000
+#define CS4 B0001
+#define DS4 B0010
+#define F4 B0011
+#define FS4 B0100
+#define GS4 B0101
+#define AS4 B0110
+#define B4 B0111
+#define CS5 B1000
+#define DS5 B1001
+#define F5 B1010
+#define FS5 B1011
+#define GS5 B1100
+#define AS5 B1101
+#define STOP B1111
+
+#define O4 B00000000
+#define O2 B00010000
+#define O1 B00100000
+#define I B00110000
+#define II B01000000
+#define O4X B01010000
+#define O2X B01100000
+#define O1X B01110000
+#define IX B10000000
